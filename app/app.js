@@ -5,10 +5,10 @@ const port = 8080
 
 // Create connection
 const db = mysql.createConnection({
-  host     : '10.10.0.3',
-  user     : 'yossy',
-  password : 'password_yossy',
-  database : 'maindb'
+  host     : process.env.DB_HOST,
+  user     : process.env.DB_USER,
+  password : process.env.DB_PASSWORD,
+  database : process.env.DB_NAME
 })
 
 // Connect
